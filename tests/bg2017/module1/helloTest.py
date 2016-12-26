@@ -4,7 +4,7 @@ import checkpy.assertlib as assertlib
 
 @t.test(0)
 def exactHello(test):
-	test.test = lambda : assertlib.exact(lib.outputOf(_fileName).split("\n"), "Hello, world!\n")
+	test.test = lambda : assertlib.exact(lib.outputOf(_fileName), "Hello, world!\n")
 	test.description = lambda : "print precies: Hello, world!"
 
 @t.failed(exactHello)
