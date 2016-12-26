@@ -11,4 +11,4 @@ def exactHello(test):
 @t.test(1)
 def oneLine(test):
 	test.test = lambda : assertlib.exact(len(lib.outputOf(_fileName).split("\n")), 2)
-	test.description = lambda : "print precies één regel"
+	test.description = lambda : "print precies 1 regel"
