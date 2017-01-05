@@ -4,8 +4,8 @@ import checkpy.assertlib as assertlib
 
 @t.test(0)
 def showsGraph(test):
-	test.test = lambda : assertlib.fileContainsFunctionCalls(_fileName, "show")
-	test.description = lambda : "vertoont een grafiek"
+	test.test = lambda : assertlib.fileContainsFunctionCalls(_fileName, "savefig")
+	test.description = lambda : "slaat een grafiek op"
 
 @t.test(1)
 def exactZeroPoint(test):
