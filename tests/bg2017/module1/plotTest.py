@@ -2,16 +2,6 @@ import checkpy.tests as t
 import checkpy.lib as lib
 import checkpy.assertlib as assertlib
 
-def before():
-	import matplotlib.pyplot as plt
-	plt.switch_backend("Agg")
-	lib.neutralizeFunction(plt.pause)
-
-def after():
-	import matplotlib.pyplot as plt
-	plt.switch_backend("TkAgg")
-	reload(plt)
-
 @t.test(0)
 def showsGraph(test):
 	test.test = lambda : assertlib.fileContainsFunctionCalls(_fileName, "show")
