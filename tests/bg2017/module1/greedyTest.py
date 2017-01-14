@@ -22,6 +22,11 @@ def exactChange402(test):
 	test.test = lambda : assertlib.numberOnLine(18, lib.getLine(lib.outputOf(_fileName, [4.02]), 0))
 	test.description = lambda : "4.02$ aan wisselgeld staat gelijk aan 18 munten"
 
+@t.test(4)
+def exactChange35(test):
+	test.test = lambda : assertlib.numberOnLine(2, lib.getLine(lib.outputOf(_fileName, [0.35]), 0))
+	test.description = lambda : "0.35$ aan wisselgeld staat gelijk aan 2 munten"
+
 @t.test(10)
 def handlesWrongInput(test):
 	test.test = lambda : assertlib.numberOnLine(0, lib.getLine(lib.outputOf(_fileName, [-9.50, -327, 0]), 0))
