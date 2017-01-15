@@ -54,7 +54,7 @@ def count_exact_matches_0b(test):
 @t.test(6)
 def has_exact_matches(test):
     test.test = lambda : assertlib.fileContainsFunctionDefinitions(_fileName, "exact_matches")
-    test.description = lambda : "definieert de functie count_exact_matches()"
+    test.description = lambda : "definieert de functie exact_matches()"
 
 @t.passed(has_exact_matches)
 @t.test(7)
