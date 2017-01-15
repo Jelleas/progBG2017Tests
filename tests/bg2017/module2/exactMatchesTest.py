@@ -7,7 +7,7 @@ import checkpy.assertlib as assertlib
 @t.test(0)
 def has_count_exact_matches(test):
     test.test = lambda : assertlib.fileContainsFunctionDefinitions(_fileName, "count_exact_matches")
-    test.description = lambda : "definieert de functie count_exact_matches()"
+    test.description = lambda : "definieert de functie count_exact_matches"
 
 @t.passed(has_count_exact_matches)
 @t.test(1)
@@ -54,7 +54,7 @@ def count_exact_matches_0b(test):
 @t.test(6)
 def has_exact_matches(test):
     test.test = lambda : assertlib.fileContainsFunctionDefinitions(_fileName, "exact_matches")
-    test.description = lambda : "definieert de functie exact_matches()"
+    test.description = lambda : "definieert de functie exact_matches"
 
 @t.passed(has_exact_matches)
 @t.test(7)
@@ -98,17 +98,6 @@ def exact_matches_c(test):
     test.description = lambda : "exact_matches werkt voor invoer '', 'test'"
 
 
-
-#print exact_matches("atgacatgcacaagtatgcat", "atgc")
-#print exact_matches("atgacatgca", "a")
-#print exact_matches("atgacatgca", "b")
-#print exact_matches("atgacatgca", "")
-#print exact_matches("", "test")
-#[5, 15]
-#[0, 3, 5, 9]
-#[]
-#[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
-#[]
 
 
 
