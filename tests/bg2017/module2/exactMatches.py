@@ -42,30 +42,30 @@ def is_int_count_exact_matches(test):
 @t.test(2)
 def correct_count_exact_matches(test):
     test.test = lambda : assertlib.exact(
-        lib.getFunction("count_exact_matches", 
+        lib.getFunction("count_exact_matches",
         _fileName)("atgacatgcacaagtatgcat", "atgc"), 2)
     test.description = lambda : "count_exact_matches werkt voor invoer 'atgacatgcacaagtatgcat', 'atgc'"
 
-@t.passed(has_count_exact_matches)
-@t.test(3)
-def correct_count_exact_matches(test):
-    test.test = lambda : sorted(int(p * 10) for p in
-        lib.getFunction("count_exact_matches", 
-        _fileName)("atgacatgcacaagtatgcat", "atgc")) == 4
-    test.description = lambda : "count_exact_matches werkt voor invoer 'atgacatgcacaagtatgcat', 'a'"
-
-@t.passed(has_count_exact_matches)
-@t.test(3)
-def correct_count_exact_matches(test):
-    test.test = lambda : sorted(int(p * 10) for p in
-        lib.getFunction("count_exact_matches", 
-        _fileName)("atgacatgcacaagtatgcat", "atgc")) == 0
-    test.description = lambda : "count_exact_matches werkt voor invoer 'atgacatgcacaagtatgcat', 'b'"
-
-@t.passed(has_count_exact_matches)
-@t.test(4)
-def correct_count_exact_matches(test):
-    test.test = lambda : sorted(int(p * 10) for p in
-        lib.getFunction("count_exact_matches", 
-        _fileName)("atgacatgcacaagtatgcat", "atgc")) == 0
-    test.description = lambda : "count_exact_matches werkt voor invoer '', 'atgc'"
+#@t.passed(has_count_exact_matches)
+#@t.test(3)
+#def correct_count_exact_matches(test):
+#    test.test = lambda : sorted(int(p * 10) for p in
+#        lib.getFunction("count_exact_matches", 
+#        _fileName)("atgacatgcacaagtatgcat", "atgc")) == 4
+#    test.description = lambda : "count_exact_matches werkt voor invoer 'atgacatgcacaagtatgcat', 'a'"
+#
+#@t.passed(has_count_exact_matches)
+#@t.test(4)
+#def correct_count_exact_matches(test):
+#    test.test = lambda : sorted(int(p * 10) for p in
+#        lib.getFunction("count_exact_matches", 
+#        _fileName)("atgacatgcacaagtatgcat", "atgc")) == 0
+#    test.description = lambda : "count_exact_matches werkt voor invoer 'atgacatgcacaagtatgcat', 'b'"
+#
+#@t.passed(has_count_exact_matches)
+#@t.test(5)
+#def correct_count_exact_matches(test):
+#    test.test = lambda : sorted(int(p * 10) for p in
+#        lib.getFunction("count_exact_matches", 
+#        _fileName)("atgacatgcacaagtatgcat", "atgc")) == 0
+#    test.description = lambda : "count_exact_matches werkt voor invoer '', 'atgc'"
