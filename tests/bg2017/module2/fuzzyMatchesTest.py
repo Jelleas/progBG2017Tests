@@ -15,7 +15,7 @@ def is_list_split_needle(test):
     test.test = lambda : assertlib.sameType(lib.getFunction("split_needle", _fileName)("a"), [])
     test.description = lambda : "split_needle geeft een lijst terug"
 
-@t.passed(has_split_needle)
+@t.passed(is_list_split_needle)
 @t.test(2)
 def split_needle_a(test):
     test.test = lambda : set(lib.getFunction("split_needle",
@@ -23,7 +23,7 @@ def split_needle_a(test):
 
     test.description = lambda : "split_needle werkt voor de invoer 'ab'"
 
-@t.passed(has_split_needle)
+@t.passed(is_list_split_needle)
 @t.test(3)
 def split_needle_b(test):
     test.test = lambda : set(lib.getFunction("split_needle",
@@ -31,7 +31,7 @@ def split_needle_b(test):
     test.description = lambda : "split_needle werkt voor de invoer 'abcde'"
 
 
-@t.passed(has_split_needle)
+@t.passed(is_list_split_needle)
 @t.test(4)
 def split_needle_c(test):
     test.test = lambda : set(lib.getFunction("split_needle",
@@ -52,42 +52,42 @@ def is_list_fuzzy_matches(test):
     test.test = lambda : assertlib.sameType(lib.getFunction("fuzzy_matches", _fileName)("a", "a"), [])
     test.description = lambda : "fuzzy_matches geeft een lijst terug"
 
-@t.passed(has_fuzzy_matches)
+@t.passed(is_list_fuzzy_matches)
 @t.test(7)
 def fuzzy_matches_a(test):
     test.test = lambda : set(lib.getFunction("fuzzy_matches",
         _fileName)("atgacatgca", "atgc")) == set([0, 5])
     test.description = lambda : "fuzzy_matches werkt voor de invoer 'atgacatgca', 'atgc'"
 
-@t.passed(has_fuzzy_matches)
+@t.passed(is_list_fuzzy_matches)
 @t.test(8)
 def fuzzy_matches_b(test):
     test.test = lambda : set(lib.getFunction("fuzzy_matches",
         _fileName)("atgacatgca", "atga")) == set([0, 5])
     test.description = lambda : "fuzzy_matches werkt voor de invoer 'atgacatgca', 'atga'"
 
-@t.passed(has_fuzzy_matches)
+@t.passed(is_list_fuzzy_matches)
 @t.test(9)
 def fuzzy_matches_c(test):
     test.test = lambda : set(lib.getFunction("fuzzy_matches",
         _fileName)("atgacatgca", "aggc")) == set([5])
     test.description = lambda : "fuzzy_matches werkt voor de invoer 'atgacatgca', 'aggc'"
 
-@t.passed(has_fuzzy_matches)
+@t.passed(is_list_fuzzy_matches)
 @t.test(10)
 def fuzzy_matches_d(test):
     test.test = lambda : set(lib.getFunction("fuzzy_matches",
         _fileName)("atgacatgca", "ax")) == set([0, 3, 5])
     test.description = lambda : "fuzzy_matches werkt voor de invoer 'atgacatgca', 'ax'"
 
-@t.passed(has_fuzzy_matches)
+@t.passed(is_list_fuzzy_matches)
 @t.test(11)
 def fuzzy_matches_e(test):
     test.test = lambda : set(lib.getFunction("fuzzy_matches",
         _fileName)("atgacatgca", "")) == set([])
     test.description = lambda : "fuzzy_matches werkt voor de invoer 'atgacatgca', ''"
 
-@t.passed(has_fuzzy_matches)
+@t.passed(is_list_fuzzy_matches)
 @t.test(12)
 def fuzzy_matches_f(test):
     test.test = lambda : set(lib.getFunction("fuzzy_matches",

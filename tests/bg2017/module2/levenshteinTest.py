@@ -5,68 +5,69 @@ import checkpy.assertlib as assertlib
 #### split_needle
 
 @t.test(0)
-def has_levensteihn(test):
-    test.test = lambda : assertlib.fileContainsFunctionDefinitions(_fileName, "levensteihn")
-    test.description = lambda : "definieert de functie levensteihn"
+def has_levenshtein(test):
+    test.test = lambda : assertlib.fileContainsFunctionDefinitions(_fileName,
+        "levenshtein_distance")
+    test.description = lambda : "definieert de functie levenshtein_distance"
 
-@t.passed(has_levensteihn)
+@t.passed(has_levenshtein)
 @t.test(1)
-def is_int_levensteihn(test):
-    test.test = lambda : assertlib.sameType(lib.getFunction("levensteihn", _fileName)("a", "b"), 0)
-    test.description = lambda : "levensteihn geeft een int terug"
+def is_int_levenshtein(test):
+    test.test = lambda : assertlib.sameType(lib.getFunction("levenshtein_distance", _fileName)("a", "b"), 0)
+    test.description = lambda : "levenshtein_distance geeft een int terug"
 
-@t.passed(has_levensteihn)
+@t.passed(has_levenshtein)
 @t.test(2)
-def levensteihn_a(test):
-    test.test = lambda : assertlib.exact(lib.getFunction("levensteihn",
+def levenshtein_a(test):
+    test.test = lambda : assertlib.exact(lib.getFunction("levenshtein_distance",
         _fileName)("majeur", "mineur"), 4)
-    test.description = lambda : "levensteihn werkt voor de invoer 'majeur', 'mineur'"
+    test.description = lambda : "levenshtein_distance werkt voor de invoer 'majeur', 'mineur'"
 
-@t.passed(has_levensteihn)
+@t.passed(has_levenshtein)
 @t.test(3)
-def levensteihn_b(test):
-    test.test = lambda : assertlib.exact(lib.getFunction("levensteihn",
+def levenshtein_b(test):
+    test.test = lambda : assertlib.exact(lib.getFunction("levenshtein_distance",
         _fileName)("mineur", "majeur"), 4)
-    test.description = lambda : "levensteihn werkt voor de invoer 'mineur', 'majeur'"
+    test.description = lambda : "levenshtein_distance werkt voor de invoer 'mineur', 'majeur'"
 
-@t.passed(has_levensteihn)
+@t.passed(has_levenshtein)
 @t.test(4)
-def levensteihn_c(test):
-    test.test = lambda : assertlib.exact(lib.getFunction("levensteihn",
+def levenshtein_c(test):
+    test.test = lambda : assertlib.exact(lib.getFunction("levenshtein_distance",
         _fileName)("kitten", "sitting"), 5)
-    test.description = lambda : "levensteihn werkt voor de invoer 'kitten', 'sitting'"
+    test.description = lambda : "levenshtein_distance werkt voor de invoer 'kitten', 'sitting'"
 
-@t.passed(has_levensteihn)
+@t.passed(has_levenshtein)
 @t.test(5)
-def levensteihn_d(test):
-    test.test = lambda : assertlib.exact(lib.getFunction("levensteihn",
+def levenshtein_d(test):
+    test.test = lambda : assertlib.exact(lib.getFunction("levenshtein_distance",
         _fileName)("sitten", "sittin"), 2)
-    test.description = lambda : "levensteihn werkt voor de invoer 'sitten', 'sittin'"
+    test.description = lambda : "levenshtein_distance werkt voor de invoer 'sitten', 'sittin'"
 
-@t.passed(has_levensteihn)
+@t.passed(has_levenshtein)
 @t.test(6)
-def levensteihn_e(test):
-    test.test = lambda : assertlib.exact(lib.getFunction("levensteihn",
+def levenshtein_e(test):
+    test.test = lambda : assertlib.exact(lib.getFunction("levenshtein_distance",
         _fileName)("sitting", "sittin"), 1)
-    test.description = lambda : "levensteihn werkt voor de invoer 'sitting', 'sittin'"
+    test.description = lambda : "levenshtein_distance werkt voor de invoer 'sitting', 'sittin'"
 
-@t.passed(has_levensteihn)
+@t.passed(has_levenshtein)
 @t.test(7)
-def levensteihn_f(test):
-    test.test = lambda : assertlib.exact(lib.getFunction("levensteihn",
+def levenshtein_f(test):
+    test.test = lambda : assertlib.exact(lib.getFunction("levenshtein_distance",
         _fileName)("hello", "hello"), 0)
-    test.description = lambda : "levensteihn werkt voor de invoer 'hello', 'hello'"
+    test.description = lambda : "levenshtein_distance werkt voor de invoer 'hello', 'hello'"
 
-@t.passed(has_levensteihn)
+@t.passed(has_levenshtein)
 @t.test(8)
-def levensteihn_f(test):
-    test.test = lambda : assertlib.exact(lib.getFunction("levensteihn",
+def levenshtein_f(test):
+    test.test = lambda : assertlib.exact(lib.getFunction("levenshtein_distance",
         _fileName)("hello", ""), 5)
-    test.description = lambda : "levensteihn werkt voor de invoer 'hello', ''"
+    test.description = lambda : "levenshtein_distance werkt voor de invoer 'hello', ''"
 
-@t.passed(has_levensteihn)
+@t.passed(has_levenshtein)
 @t.test(9)
-def levensteihn_g(test):
-    test.test = lambda : assertlib.exact(lib.getFunction("levensteihn",
+def levenshtein_g(test):
+    test.test = lambda : assertlib.exact(lib.getFunction("levenshtein_distance",
         _fileName)("", "hello"), 5)
-    test.description = lambda : "levensteihn werkt voor de invoer '', 'hello'"
+    test.description = lambda : "levenshtein_distance werkt voor de invoer '', 'hello'"
