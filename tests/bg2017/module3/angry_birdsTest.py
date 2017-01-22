@@ -24,7 +24,9 @@ def correctOutput(test):
 					break
 			else:
 				nCorrect -= 1
-		return nCorrect == nAnswers, "Miste o.a. verwachte antwoorden {}\nVond o.a. op de volgende regels een niet kloppend antwoord: {}".format(answers[:2], lines[:2])
+		missingAnswers = "Miste o.a. verwachte antwoorden {}".format(", ".join([str(a) for a in answers[:2]]))
+		wrongAnswers = "Vond o.a. op de volgende regels een niet kloppend antwoord: {}".format(lines[:2])
+		return nCorrect == nAnswers, "{}\n{}".format(missingAnswers, wrongAnswers)
 
 	test.test = testMethod
 	test.description = lambda : "print de juiste hoeken waarbij de vogel de sensor raakt"
