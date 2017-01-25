@@ -7,8 +7,13 @@ def hasBeweging(test):
 	test.test = lambda : assertlib.fileContainsFunctionDefinitions(_fileName, "beweging")
 	test.description = lambda : "definieert de functie `beweging()`"
 
-@t.passed(hasBeweging)
 @t.test(1)
+def showsGraph(test):
+	test.test = lambda : assertlib.fileContainsFunctionCalls(_fileName, "savefig")
+	test.description = lambda : "slaat een grafiek op"
+
+@t.passed(hasBeweging)
+@t.test(10)
 def correctOutput(test):
 	def testMethod():
 		lines = [line for line in lib.outputOf(_fileName).split("\n") if line.strip()]
